@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Pt - Independent developer building robust, scalable systems and open-source developer tools: Lc, Tap, Run, Tal, Tycl, Manage.">
+    <meta name="theme-color" content="#0b0a09">
+    <meta name="color-scheme" content="dark">
+    <title>Pt - Creative Developer</title>
+    <link rel="stylesheet" href="assets/pt.css">
+    <link rel="stylesheet" href="assets/other.css">
+    <script>
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+        document.documentElement.classList.add('js');
+        setTimeout(function () {
+            var r = document.documentElement;
+            if (!r.classList.contains('pt-ready')) r.classList.add('pt-lite');
+        }, 4000);
+    </script>
+</head>
+<body>
+
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <!-- NAVBAR -->
+    <nav class="navbar glass" aria-label="Primary">
+        <div class="nav-content">
+            <a href="#" class="logo" aria-label="Home">pt</a>
+
+            <input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-hidden="true" tabindex="-1">
+            <label for="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" role="button">
+                <span></span><span></span><span></span>
+            </label>
+
+            <ul class="nav-links">
+                <li><a href="#about"   class="nav-link">About</a></li>
+                <li><a href="#stack"   class="nav-link">Stack</a></li>
+                <li><a href="#work"    class="nav-link">Work</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="pages/terminal.html" class="nav-link">Terminal</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main">
+        <!-- HERO -->
+        <div class="page pt-grad-2">
+            <section class="hero card card-fullscreen pt-grad-1" aria-label="Introduction">
+                <div class="hero-badges">
+                    <span class="badge">Designer</span>
+                    <span class="badge">System developer</span>
+                    <span class="badge">Tech lead</span>
+                </div>
+
+                <h1 class="hero-title">Pt</h1>
+
+                <p class="hero-tagline">people work's for people</p>
+
+                <p class="hero-desc">
+                    Independent developer. Building robust and scalable systems.
+                </p>
+
+                <div class="btn-group hero-actions">
+                    <a href="#work"    class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Get in touch</a>
+                </div>
+            </section>
+        </div>
+
+        <!-- ABOUT -->
+        <section id="about" class="section section-first">
+            <div class="container">
+                <h1 class="reveal reveal-delay-3">Who I am?</h1>
+                <h4 class="reveal reveal-delay-3">I am a system developer creating open dev tools and frameworks.</h4>
+
+                <div class="grid grid-3 mt-16">
+                    <div class="card reveal reveal-delay-1">
+                        <div class="card-icon">01</div>
+                        <h4 class="card-title">Philosophy</h4>
+                        <p class="text-muted text-small">
+                            AI is merely a tool. It cannot and should not take over more than 30% of routine tasks—and only provided that you actually understand what it is writing.
+                        </p>
+                    </div>
+
+                    <div class="card reveal reveal-delay-2">
+                        <div class="card-icon">02</div>
+                        <h4 class="card-title">Focus</h4>
+                        <p class="text-muted text-small">
+                            Building really simple, useful and convenient developer tools. Simple installation, operation, and extensibility.
+                        </p>
+                    </div>
+
+                    <div class="card reveal reveal-delay-3">
+                        <div class="card-icon">03</div>
+                        <h4 class="card-title">Education</h4>
+                        <p class="text-muted text-small">
+                            Entirely self-taught. I completed CS50, enjoyed it, and started writing my own projects while simultaneously studying others' code. Three years of experience.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STACK -->
+        <section id="stack" class="section">
+            <div class="container">
+                <h2 class="reveal">The Stack</h2>
+                <p class="reveal reveal-delay-1 text-muted mb-10">Tools and languages I use to bring ideas to life.</p>
+
+                <div class="grid grid-2 gap-6">
+                    <div class="terminal reveal reveal-delay-2">
+                        <div class="terminal-header">
+                            <span class="terminal-dot terminal-dot-red"></span>
+                            <span class="terminal-dot terminal-dot-yellow"></span>
+                            <span class="terminal-dot terminal-dot-green"></span>
+                            <span class="terminal-title">bash</span>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="terminal-line">
+                                <span class="terminal-prompt">pt@dev:~$</span>
+                                <span class="terminal-output">cat stack.config</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="terminal-output" style="color: var(--c-accent-bright);">
+                                    core: [ 'Go', 'Rust', 'C' ]<br>
+                                    design: [ 'Photoshop', 'Cavalry' ]<br>
+                                    other: [ 'Tal', 'Python', 'HTML5', 'CSS' ]
+                                </span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="terminal-prompt">pt@dev:~$</span>
+                                <span class="terminal-output">status: <span style="color: var(--c-success);">active</span></span>
+                                <span class="terminal-cursor"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card card-elevated reveal reveal-delay-3">
+                        <div class="card-header">
+                            <span class="eyebrow">Environment</span>
+                        </div>
+                        <h4 class="card-title">Current Setup</h4>
+                        <p class="text-small text-muted mb-6">
+                            Working locally with a highly customized environment. Always relying on terminal-first workflows.
+                        </p>
+                        <div class="flex gap-2 flex-wrap">
+                            <span class="tag">MacOS</span>
+                            <span class="tag">VsCodium</span>
+                            <span class="tag">Cutter</span>
+                            <span class="tag">Run</span>
+                            <span class="tag">Git</span>
+                            <span class="tag">GitKraken</span>
+                            <span class="tag">iTerm 2</span>
+                            <span class="tag">Obsidian</span>
+                            <span class="tag">Zen browser</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WORK -->
+        <section id="work" class="section">
+            <div class="container">
+                <h2 class="reveal">Selected Work</h2>
+                <p class="reveal reveal-delay-3 text-muted mb-10">
+                    A few projects I've built. Switch between tabs to inspect them.
+                </p>
+
+                <div class="card glass-strong reveal reveal-delay-2" style="padding: var(--space-6);">
+                    <div class="tabs-radio">
+
+                        <div class="tabs-nav" role="tablist" aria-label="Projects">
+                            <a href="#work-panel-1" class="tab-link" role="tab" aria-controls="work-panel-1">Lc</a>
+                            <a href="#work-panel-2" class="tab-link" role="tab" aria-controls="work-panel-2">Tap</a>
+                            <a href="#work-panel-3" class="tab-link" role="tab" aria-controls="work-panel-3">Run + Tal</a>
+                            <a href="#work-panel-4" class="tab-link" role="tab" aria-controls="work-panel-4">Tycl</a>
+                            <a href="#work-panel-5" class="tab-link" role="tab" aria-controls="work-panel-5">Manage</a>
+                        </div>
+
+                        <!-- PANEL 1: Lc -->
+                        <div class="tab-content" id="work-panel-1" role="tabpanel">
+                            <div class="grid grid-2 gap-8 items-start">
+                                <div>
+                                    <span class="eyebrow">2026 - Framework</span>
+                                    <h3 class="card-title" style="font-size: var(--font-size-2xl);">
+                                        Lc - Language Creator &amp; Devkit
+                                    </h3>
+                                    <p class="text-muted text-small">
+                                        Production-oriented toolkit for building language runtimes,
+                                        compilers, interpreters and bytecode-driven processors.
+                                        Ships with two engines (String &amp; Byte), a PEG parser with Pratt
+                                        expressions, an event system, plugins, and a hot loop pushing
+                                        120+ Mops/s on an i7-4770HQ. 12k+ lines of Go.
+                                    </p>
+                                    <div class="flex gap-2 flex-wrap mt-4">
+                                        <span class="tag">Go</span>
+                                        <span class="tag">Compilers</span>
+                                        <span class="tag">Bytecode</span>
+                                        <span class="tag">Plugins</span>
+                                    </div>
+                                </div>
+
+                                <div class="card card-elevated" style="padding: var(--space-5);">
+                                    <div class="flex-between mb-3">
+                                        <span class="text-faint text-xs">STATUS</span>
+                                        <span class="status-pill status-success">Stable</span>
+                                    </div>
+                                    <div class="flex-between mb-3">
+                                        <span class="text-faint text-xs">ROLE</span>
+                                        <span class="text-small">Author</span>
+                                    </div>
+                                    <div class="flex-between">
+                                        <span class="text-faint text-xs">LICENSE</span>
+                                        <span class="text-small">Apache 2.0</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-footer">
+                                <span class="text-faint text-small">go · compiler toolkit</span>
+                                <a href="https://github.com/pt-main/lc" class="btn-text">Explore project</a>
+                            </div>
+                        </div>
+
+                        <!-- PANEL 2: Tap -->
+                        <div class="tab-content" id="work-panel-2" role="tabpanel">
+                            <div class="grid grid-2 gap-8 items-start">
+                                <div>
+                                    <span class="eyebrow">2026 - CLI Library</span>
+                                    <h3 class="card-title" style="font-size: var(--font-size-2xl);">
+                                        Tap - Terminal Argument Parsing
+                                    </h3>
+                                    <p class="text-muted text-small">
+                                        A lightweight CLI library available for both Go and Rust.
+                                        Commands, flags, subcommands, auto-generated help with alias
+                                        grouping, and a rich colour system with short codes like
+                                        <code>[?GN]</code> and <code>[?RT]</code>. The Rust version
+                                        (tap-rs) ships with zero dependencies and a Console abstraction
+                                        suitable for viewport-based rendering.
+                                    </p>
+                                    <div class="flex gap-2 flex-wrap mt-4">
+                                        <span class="tag">Go</span>
+                                        <span class="tag">Rust</span>
+                                        <span class="tag">Zero deps</span>
+                                        <span class="tag">Colours</span>
+                                    </div>
+                                </div>
+
+                                <div class="card card-elevated" style="padding: var(--space-5);">
+                                    <div class="flex-between mb-3">
+                                        <span class="text-faint text-xs">STATUS</span>
+                                        <span class="status-pill status-success">Stable</span>
+                                    </div>
+                                    <div class="flex-between mb-3">
+                                        <span class="text-faint text-xs">ROLE</span>
+                                        <span class="text-small">Author</span>
+                                    </div>
+                                    <div class="flex-between">
+                                        <span class="text-faint text-xs">LICENSE</span>
+                                        <span class="text-small">MIT</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-footer">
+                                <span class="text-faint text-small">go + rust · cli toolkit</span>
+                                <a href="https://github.com/pt-main/tap" class="btn-text">Explore project</a>
+                            </div>
+                        </div>
+
+                        <!-- PANEL 3: Run + Tal -->
+                        <div class="tab-content" id="work-panel-3" role="tabpanel">
+                            <div class="grid grid-2 gap-8 items-start">
+                                <div>
+                                    <span class="eyebrow">2026 - Dev Tool</span>
+                                    <h3 class="card-title" style="font-size: var(--font-size-2xl);">
+                                        Run + Tal - Script &amp; Task Manager
+                                    </h3>
+                                    <p class="text-muted text-small">
+                                        Run stores scripts in a global (<code>~/run/</code>) or local
+                                        (<code>.run/</code>) storage, auto-generates Lua wrappers for
+                                        Python, Bash, Batch, Lua or another languages, and supports distribution via
+                                        GitHub URLs (<code>run -install</code>). Tal is an embedded
+                                        incremental task runner: plain Lua with comment annotations,
+                                        SHA256-based dependency tracking, and task-to-task calls.
+                                    </p>
+                                    <div class="flex gap-2 flex-wrap mt-4">
+                                        <span class="tag">Go</span>
+                                        <span class="tag">Lua</span>
+                                        <span class="tag">Incremental</span>
+                                        <span class="tag">Scripts</span>
+                                    </div>
+                                </div>
+
+                                <div class="card card-elevated" style="padding: var(--space-5);">
+                                    <div class="flex-between mb-3">
+                                        <span class="text-faint text-xs">STATUS</span>
+                                        <span class="status-pill status-success">Stable</span>
+                                    </div>
+                                    <div class="flex-between mb-3">
+                                        <span class="text-faint text-xs">ROLE</span>
+                                        <span class="text-small">Author</span>
+                                    </div>
+                                    <div class="flex-between">
+                                        <span class="text-faint text-xs">LICENSE</span>
+                                        <span class="text-small">Apache 2.0</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-footer">
+                                <span class="text-faint text-small">go + lua · script runtime</span>
+                                <a href="https://github.com/pt-main/run" class="btn-text">Explore project</a>
+                            </div>
+                        </div>
+
+                        <!-- PANEL 4: Tycl -->
+                        <div class="tab-content" id="work-panel-4" role="tabpanel">
+                            <div class="grid grid-2 gap-8 items-start">
+                                <div>
+                                    <span class="eyebrow">2026 - Config Language</span>
+                                    <h3 class="card-title" style="font-size: var(--font-size-2xl);">
+                                        Tycl - Typed Config Language
+                                    </h3>
+                                    <p class="text-muted text-small">
+                                        A typed configuration language for Go. Strong typing without
+                                        code generation, contracts (strict / flexible / dynamic),
+                                        null-values with explicit type, arrays of primitives and
+                                        objects, and actions like <code>env()</code>, <code>file()</code>,
+                                        <code>get()</code>. Comes with a CLI for validation, formatting,
+                                        direct file editing, and generation to JSON, YAML, TOML.
+                                    </p>
+                                    <div class="flex gap-2 flex-wrap mt-4">
+                                        <span class="tag">Go</span>
+                                        <span class="tag">Config</span>
+                                        <span class="tag">Contracts</span>
+                                        <span class="tag">Codegen</span>
+                                    </div>
+                                </div>
+
+                                <div class="card card-elevated" style="padding: var(--space-5);">
+                                    <div class="flex-between mb-3">
+                                        <span class="text-faint text-xs">STATUS</span>
+                                        <span class="status-pill status-success">Stable</span>
+                                    </div>
+                                    <div class="flex-between mb-3">
+                                        <span class="text-faint text-xs">ROLE</span>
+                                        <span class="text-small">Author</span>
+                                    </div>
+                                    <div class="flex-between">
+                                        <span class="text-faint text-xs">LICENSE</span>
+                                        <span class="text-small">Apache 2.0</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-footer">
+                                <span class="text-faint text-small">go · typed configs</span>
+                                <a href="https://github.com/pt-main/tycl" class="btn-text">Explore project</a>
+                            </div>
+                        </div>
+
+                        <!-- PANEL 5: Manage -->
+                        <div class="tab-content" id="work-panel-5" role="tabpanel">
+                            <div class="grid grid-2 gap-8 items-start">
+                                <div>
+                                    <span class="eyebrow">2026 - Productivity</span>
+                                    <h3 class="card-title" style="font-size: var(--font-size-2xl);">
+                                        Manage - CLI Task Manager
+                                    </h3>
+                                    <p class="text-muted text-small">
+                                        A terminal task manager built around themes, tasks and tables.
+                                        Each theme carries a priority and tags; each task has an ID,
+                                        description and creation timestamp. Named tables group themes
+                                        into schedules. Filtering by priority, tags, state (todo / done)
+                                        with AND / OR logic. Config is stored in Tycl under a strict
+                                        contract.
+                                    </p>
+                                    <div class="flex gap-2 flex-wrap mt-4">
+                                        <span class="tag">Go</span>
+                                        <span class="tag">CLI</span>
+                                        <span class="tag">Tycl</span>
+                                        <span class="tag">Tasks</span>
+                                    </div>
+                                </div>
+
+                                <div class="card card-elevated" style="padding: var(--space-5);">
+                                    <div class="flex-between mb-3">
+                                        <span class="text-faint text-xs">STATUS</span>
+                                        <span class="status-pill status-success">Stable</span>
+                                    </div>
+                                    <div class="flex-between mb-3">
+                                        <span class="text-faint text-xs">ROLE</span>
+                                        <span class="text-small">Author</span>
+                                    </div>
+                                    <div class="flex-between">
+                                        <span class="text-faint text-xs">LICENSE</span>
+                                        <span class="text-small">MIT</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-footer">
+                                <span class="text-faint text-small">go · productivity</span>
+                                <a href="https://github.com/pt-main/manage" class="btn-text">Explore project</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="contact">
+        <h3 class="mb-10 flex-center">Contact</h3>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h5>Navigate</h5>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#work">Projects</a></li>
+                        <li><a href="#stack">Stack</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Connect</h5>
+                    <ul>
+                        <li><a href="#modal-email">Email</a></li>
+                        <li><a href="https://github.com/pt-main/">Github</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Products</h5>
+                    <ul>
+                        <li><a href="https://github.com/pt-main/tap">Tap</a></li>
+                        <li><a href="https://github.com/pt-main/lc">Lc</a></li>
+                        <li><a href="https://github.com/pt-main/run">Run</a></li>
+                        <li><a href="https://github.com/pt-main/tycl">Tycl</a></li>
+                        <li><a href="https://github.com/pt-main/manage">Manage</a></li>
+                        <li><a href="https://github.com/pt-main/nets">Nets</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span class="footer-copy">© 2026 PT. All rights reserved.</span>
+                <span class="footer-copy">INT (TM) member.</span>
+                <span class="text-faint text-small">v1.0.0</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL -->
+    <div id="modal-email" class="modal-overlay-css" role="dialog" aria-modal="true" aria-label="Contact email">
+        <a href="#contact" class="modal-backdrop" data-modal-close aria-label="Close"></a>
+        <div class="modal">
+            <div class="modal-header">
+                <h3 class="modal-title">My email</h3>
+            </div>
+            <div class="modal-body">
+                <pre class="email-pre">pt.main.acc@gmail.com</pre>
+            </div>
+            <div class="modal-footer">
+                <a href="#contact" class="btn btn-ghost" data-modal-close>OK</a>
+            </div>
+        </div>
+    </div>
+    <script src="assets/index.js"></script>
+</body>
+</html>

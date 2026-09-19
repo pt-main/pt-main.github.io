@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="pt-terminal - interactive shell for the pt portfolio.">
+    <meta name="theme-color" content="#0a0705">
+    <meta name="color-scheme" content="dark">
+    <title>pt@dev:~$ - Terminal</title>
+    <link rel="stylesheet" href="../assets/pt.css">
+    <link rel="stylesheet" href="../assets/pt-terminal.css">
+    <script>document.documentElement.classList.add('js');</script>
+</head>
+<body class="term-page">
+
+    <a href="#term" class="skip-link">Skip to terminal</a>
+
+    <main class="term-main">
+        <div class="term" id="term" data-theme="coral" role="application" aria-label="Interactive terminal">
+            <div class="terminal-header">
+                <span class="terminal-dot terminal-dot-red"></span>
+                <span class="terminal-dot terminal-dot-yellow"></span>
+                <span class="terminal-dot terminal-dot-green"></span>
+                <span class="terminal-title">pt@dev: ~ - bash - 80x24</span>
+                <a href="../index.html" class="term-close" aria-label="Back to main site">×</a>
+            </div>
+
+            <div class="term-body" id="termBody" tabindex="-1">
+                <div class="term-output" id="termOutput"></div>
+            </div>
+
+            <div class="term-input-line" id="termInputLine">
+                <span class="term-prompt" id="termPrompt">pt@dev:~$</span>
+                <input
+                    type="text"
+                    class="term-input"
+                    id="termInput"
+                    autocomplete="off"
+                    autocorrect="off"
+                    autocapitalize="off"
+                    spellcheck="false"
+                    aria-label="Terminal input"
+                    aria-autocomplete="list"
+                >
+            </div>
+        </div>
+    </main>
+
+    <script src="../assets/terminal.js"></script>
+</body>
+</html>

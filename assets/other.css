@@ -1,0 +1,153 @@
+/* ============================================================
+   PT — animation layer
+   ============================================================ */
+
+html.pt-loading,
+html.pt-loading body { overflow: hidden !important; }
+
+/* ---------- Preloader ---------- */
+#pt-loader {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 26px;
+    background: radial-gradient(130% 90% at 50% -20%, #221b17 0%, #0b0a09 58%, #08070a 100%);
+    font-family: var(--font-family, ui-monospace, monospace);
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .6s cubic-bezier(.22,1,.36,1), visibility .6s;
+    contain: layout paint style; 
+}
+#pt-loader::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+    background-size: 48px 48px, 48px 48px;
+    -webkit-mask-image: radial-gradient(60% 50% at 50% 50%, #000 0%, transparent 100%);
+            mask-image: radial-gradient(60% 50% at 50% 50%, #000 0%, transparent 100%);
+    opacity: .7;
+}
+#pt-loader.pt-loader-done {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.pt-loader-mark {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 8px;
+    font-size: clamp(1.75rem, 6vw, 2.75rem);
+    font-weight: 600;
+    letter-spacing: -0.06em;
+    color: var(--c-text-main, #f5f3f0);
+    text-shadow: 0 0 26px rgba(255, 138, 101, .35);
+}
+.pt-loader-dollar { color: #fcb799; font-weight: 700; }
+.pt-loader-caret {
+    display: inline-block;
+    width: .5ch;
+    height: .9em;
+    background: var(--c-accent, #ed5e3e);
+    box-shadow: 0 0 14px rgba(255, 94, 58, .85);
+    transform: translateY(.06em);
+    animation: pt-caret-blink 1.05s steps(1, end) infinite;
+}
+@keyframes pt-caret-blink { 0%, 49% { opacity: 1 } 50%, 100% { opacity: 0 } }
+
+.pt-loader-bar {
+    position: relative;
+    width: min(280px, 62vw);
+    height: 3px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .06);
+    overflow: hidden;
+}
+
+.pt-loader-fill {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #ed5e3e 0%, #ff8a65 100%);
+    box-shadow: 0 0 22px rgba(255, 94, 58, .6);
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    will-change: transform;
+}
+.pt-loader-status {
+    font-size: .6875rem;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--c-text-secondary, #786f67);
+    min-height: 1em;      
+}
+
+/* ---------- Motion-only choreography ---------- */
+@media (prefers-reduced-motion: no-preference) {
+
+    html.js .reveal {
+        opacity: 0;
+        transform: translate3d(0, 18px, 0);
+        backface-visibility: hidden;
+        animation: none !important;
+    }
+    html.js .reveal.pt-in {
+        animation: pt-reveal-in .55s cubic-bezier(.22, 1, .36, 1) var(--pt-delay, 0ms) both !important;
+        will-change: transform, opacity;
+    }
+
+    html.pt-lite .reveal,
+    html.pt-lite .reveal.pt-in {
+        animation: none !important;
+        opacity: 1;
+        transform: none;
+        will-change: auto;
+    }
+
+    @keyframes pt-reveal-in {
+        from { opacity: 0; transform: translate3d(0, 18px, 0); }
+        to   { opacity: 1; transform: translate3d(0, 0, 0);    }
+    }
+
+    html.pt-lite .reveal,
+    html.pt-lite .reveal.pt-in {
+        animation: none !important;
+        opacity: 1;
+        transform: none;
+        will-change: auto;
+    }
+
+    /* ---- Navbar -------------------------------------------- */
+    .navbar {
+        transition:
+            all .35s cubic-bezier(.22, 1, .36, 1),
+            opacity .7s cubic-bezier(.22, 1, .36, 1) .12s,
+            transform .7s cubic-bezier(.22, 1, .36, 1) .12s;
+    }
+    html.pt-loading .navbar {
+        opacity: 0;
+        transform: translateY(-14px);
+        pointer-events: none;
+    }
+    .hero.pt-seq > * {
+        opacity: 0;
+        transform: translate3d(0, 18px, 0);
+        backface-visibility: hidden;
+    }
+    .hero.pt-seq.pt-hero-in > * {
+        animation: pt-hero-in .7s cubic-bezier(.22, 1, .36, 1) var(--pt-delay, 0ms) both;
+        will-change: transform, opacity;
+    }
+    @keyframes pt-hero-in {
+        from { opacity: 0; transform: translate3d(0, 18px, 0); }
+        to   { opacity: 1; transform: translate3d(0, 0, 0);    }
+    }
+}
