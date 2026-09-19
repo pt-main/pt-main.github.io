@@ -58,21 +58,16 @@
     };
 
     const NOW_TEXT = [
-        'Building pt-terminal and Lc.',
+        'Building run and [???].',
         'Reading "Crafting Interpreters".',
-        'Next up: Tycl 1.0, Manage 0.4.'
-    ];
-
-    const LINKS = [
-        { key: 'email',    value: 'pt.main.acc@gmail.com', href: 'mailto:pt.main.acc@gmail.com' },
-        { key: 'github',   value: 'github.com/pt-main',    href: 'https://github.com/pt-main/' },
-        { key: 'telegram', value: '@pt_main',              href: 'https://t.me/pt_main' }
+        'Next up: Run v1.5, [???] v0.'
     ];
 
     const RESUME = {
         experience: [
-            '2022 - now    Independent Developer',
-            '2021 - 2022   Freelance automation / CLI tooling'
+            '2026 - now    Active aducation and writing pet-projects',
+            '2023 - 2026   System Developer',
+            '2021 - 2023   Freelance automation / CLI tooling'
         ],
         education: [
             'CS50 - Harvard (online)',
@@ -237,7 +232,6 @@
                     ['projects',        'Alias of work'],
                     ['project <name>',  'Show details of a project'],
                     ['contact',         'Get in touch'],
-                    ['links',           'All contact channels'],
                     ['resume',          'Resume / CV'],
                     ['search <query>',  'Search across portfolio content']
                 ];
@@ -441,18 +435,6 @@
             printHTML('<span class="term-key">email:</span>  <a class="term-link" href="mailto:pt.main.acc@gmail.com">pt.main.acc@gmail.com</a>');
             printHTML('<span class="term-key">github:</span> <a class="term-link" href="https://github.com/pt-main/" target="_blank" rel="noopener">github.com/pt-main</a>');
             blank();
-            print("Use 'links' for all channels.", 'term-dim');
-        },
-
-        links() {
-            print('Links', 'term-head');
-            blank();
-            LINKS.forEach(l => {
-                printHTML(
-                    `<span class="term-key">${esc(pad(l.key + ':', 10))}</span>` +
-                    `<a class="term-link" href="${esc(l.href)}" ${l.href.startsWith('http') ? 'target="_blank" rel="noopener"' : ''}>${esc(l.value)}</a>`
-                );
-            });
         },
 
         resume(args) {
