@@ -489,11 +489,6 @@
                 if (test(blob)) hits.push({ where: 'project', what: key, hint: p.name });
             }
 
-            // Links
-            for (const l of LINKS) {
-                if (test(l.key) || test(l.value)) hits.push({ where: 'links', what: l.key });
-            }
-
             if (!hits.length) {
                 print(`search: no matches for "${q}"`, 'term-dim');
                 return;
