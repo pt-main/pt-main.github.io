@@ -65,7 +65,7 @@
 
     const RESUME = {
         experience: [
-            '2026 - now    Active aducation and writing pet-projects',
+            '2026 - now    Active education and writing pet-projects',
             '2023 - 2026   System Developer',
             '2021 - 2023   Freelance automation / CLI tooling'
         ],
